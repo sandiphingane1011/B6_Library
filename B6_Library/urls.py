@@ -44,4 +44,5 @@ urlpatterns +=[
 
 urlpatterns += [
     path('__debug__/', include('debug_toolbar.urls')),
+    path('prod video/',views.product_video, name="product_video"),
 ]
