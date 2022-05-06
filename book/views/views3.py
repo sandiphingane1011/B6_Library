@@ -2,7 +2,9 @@ from urllib import request
 from django.shortcuts import redirect, render 
 from..models import Book
 from django.http import HttpResponse
+
 import traceback
+from django.contrib.auth import login, logout,authenticate
 # Create your views here.
 
 
