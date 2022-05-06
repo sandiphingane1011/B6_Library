@@ -96,3 +96,8 @@ def view_c(request):
 
 def view_d(request):
     return HttpResponse("in view_d")   
+
+
+def product_video(request):
+    print("In product video")
+    return HttpResponse("video")
