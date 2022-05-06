@@ -2,7 +2,9 @@ from urllib import request
 from django.shortcuts import redirect, render 
 from..models import Book
 from django.http import HttpResponse
+
 import traceback
+from django.contrib.auth import login, logout,authenticate
 # Create your views here.
 
 
@@ -96,3 +98,17 @@ def view_c(request):
 
 def view_d(request):
     return HttpResponse("in view_d")   
+
+
+
+#################
+
+# git practice
+
+def user_login(request):
+    username = request.POST.get("username")
+    password = request.POST.get("password")
+    user = authenticate(username, password)
+    if user:
+        login(request, user)
+        return HttpResponse("Successfully Logged In..!")

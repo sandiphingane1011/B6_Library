@@ -44,4 +44,5 @@ urlpatterns +=[
 
 urlpatterns += [
     path('__debug__/', include('debug_toolbar.urls')),
+    path('user-login/', views.user_login, name="user_login"),
 ]
