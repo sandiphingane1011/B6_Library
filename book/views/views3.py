@@ -1,8 +1,7 @@
 from urllib import request
 from django.shortcuts import redirect, render 
-from..models import Book
+from models import Book
 from django.http import HttpResponse
-
 import traceback
 from django.contrib.auth import login, logout,authenticate
 # Create your views here.
@@ -100,6 +99,6 @@ def view_d(request):
     return HttpResponse("in view_d")   
 
 
-def product_video(request):
-    print("In product video")
-    return HttpResponse("video")
+# def product_video(request):
+#     print("In product video")
+#     return HttpResponse("video")

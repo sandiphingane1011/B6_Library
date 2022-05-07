@@ -16,7 +16,7 @@ Including another URLconf
 from django import urls
 from django.contrib import admin
 from django.urls import path, include,re_path
-from book import views 
+from book import views
 from django.conf.urls import url
 
 
@@ -44,5 +44,5 @@ urlpatterns +=[
 
 urlpatterns += [
     path('__debug__/', include('debug_toolbar.urls')),
-    path('prod video/',views.product_video, name="product_video"),
+    # path('prod video/',views.product_video, name="product_video"),
 ]
